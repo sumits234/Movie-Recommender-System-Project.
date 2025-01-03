@@ -1,0 +1,183 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url('https://img.freepik.com/free-photo/blue-glitter-movie-background-stage_1150-4434.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the background stationary */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    flex: 1;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.navbar .user {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Button Styles */
+.login-btn, .signup-btn, .contact-btn {
+    padding: 10px 20px;
+    background-color: #2b7496;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.signup-btn {
+    background-color: #28a745; /* Updated green color */
+}
+
+.login-btn {
+    background-color: #dc3545; /* Updated red color */
+}
+
+.login-btn:hover, .signup-btn:hover, .contact-btn:hover {
+    background-color: #f1f2f6;
+    color: #405667;
+}
+
+/* Main Content Styling */
+.main-content {
+    text-align: center;
+    margin-top: 100px; /* Adjust for fixed navbar */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the form */
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #f39c12;
+}
+
+select {
+    width: 250px;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    width: 150px;
+    margin-top: 15px;
+}
+
+/* Movie Recommendations */
+.recommendations {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.recommendations .movie {
+    text-align: center;
+}
+
+.recommendations img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sign-Up & Login Forms */
+.form-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #e67e22;
+}
+
+/* Contact Us Section */
+.contact-container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 30px;
+    border-radius: 10px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Discovery Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Movie Discovery Hub</div>
+        {% if 'username' in session %}
+            <div class="user">
+                Welcome, {{ session['username'] }} | <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+            <a href="{{ url_for('signup') }}" class="signup-btn">Sign Up</a>
+        {% endif %}
+        <a href="{{ url_for('contact') }}" class="contact-btn">Contact Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Find Your Favorite Movie</h1>
+        <form method="POST">
+            <label for="movie">Select a movie:</label>
+            <select id="movie" name="movie">
+                {% for movie in movie_list %}
+                <option value="{{ movie }}">{{ movie }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="submit-btn">Show Recommendations</button>
+        </form>
+
+        {% if recommended_movie_names %}
+        <div class="recommendations">
+            {% for name, poster in zip(recommended_movie_names, recommended_movie_posters) %}
+            <div class="movie">
+                <h3>{{ name }}</h3>
+                <img src="{{ poster }}" alt="Poster of {{ name }}">
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
