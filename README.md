@@ -20,8 +20,7 @@ Welcome to the **Movie Recommender System Project**! This project leverages mach
 - **Backend**: Python, Flask
 - **Frontend**: HTML, CSS, JavaScript
 - **Machine Learning**: Pandas, Scikit-learn, Numpy
-- **Database**: SQLite (or any other relational database of choice)
-- **Deployment**: Flask (locally or on cloud platforms like Heroku, AWS, etc.)
+- **Deployment**: Flask (locally or on cloud platforms like Heroku)
 
 ---
 
@@ -50,11 +49,6 @@ Ensure you have the following installed on your system:
    - Create a database named `movies.db` (or use the existing file in the repository).
    - Populate it with the required data (you can use provided datasets).
 
-4. **Run the Application**:
-   ```bash
-   flask run
-   ```
-   The application will be accessible at `http://127.0.0.1:5000/`.
 
 ---
 
